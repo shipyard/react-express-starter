@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
 
@@ -32,7 +32,7 @@ services:
 
   backend:
     labels:
-      shipyard.before: 'npx sequelize-cli db:migrate'
+      shipyard.init: 'npx sequelize-cli db:migrate'
       shipyard.route: '/api'
     build:
       context: 'backend'
